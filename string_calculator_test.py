@@ -11,5 +11,5 @@ class Test_string_calculator(unittest.Testcase):
     # assert
     self.assertEqual(actual_value, expected_value)
 
-if__name__=="main__",
+if __name__=="main__",
 

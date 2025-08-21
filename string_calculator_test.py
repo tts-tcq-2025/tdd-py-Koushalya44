@@ -1,6 +1,5 @@
 import unittest
-from monitor import check_vitals_with_warning
-
+from string_calculator import add
 class Test_string_calculator(unittest.Testcase):
   def test_empty_string_return_zero(self):
     # arrange
@@ -11,5 +10,6 @@ class Test_string_calculator(unittest.Testcase):
     # assert
     self.assertEqual(actual_value, expected_value)
 
-if __name__=="main__",
+if __name__=="main__":
+  unittest.main()
 

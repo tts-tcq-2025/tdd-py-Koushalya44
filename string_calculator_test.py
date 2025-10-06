@@ -1,15 +1,20 @@
-import unittest
-from string_calculator import add
-class Test_string_calculator(unittest.Testcase):
-  def test_empty_string_return_zero(self):
-    # arrange
-    input = ""
-    expected_value =0
-    # action
-    actual_value = add(input)
-    # assert
-    self.assertEqual(actual_value, expected_value)
+import pytest
+from calc import Add
 
-if __name__=="main__":
-  unittest.main()
+def test_empty_string():
+    assert Add("") == 0
 
+def test_single_number():
+    assert Add("1") == 1
+
+def test_two_numbers():
+    assert Add("1,2") == 3
+
+def test_multiple_numbers():
+    assert Add("1,2,3") == 6
+
+def test_newline_separator():
+    assert Add("1\n2,3") == 6
+
+def test_custom_delimiter():
+    assert Add("//;\n1;2") == 3
